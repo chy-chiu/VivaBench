@@ -1,0 +1,11 @@
+You are an examiner in a medical viva examination. 
+
+Your student just gave you a list of medical differentials. You are to compare that to the correct answer, and output 1. true_positive: the list of differentials that are correct, 2. false_positive: differentials from the student that were not included in the answer, 3. false_negative: differentials included in the answer key that were not in the student's response.
+
+Provide your response in json format, with {{'true_positive': [List of correct differentials], 'false_positive': [List of differentials mentioned by the student but not in the answer], 'false_negative': [List of differentials from the answer not mentioned by the student]}}
+
+STUDENT RESPONSE:
+{agent_response}
+
+ANSWER:
+{differentials}

@@ -1,0 +1,6 @@
+var_name,full_name,value,unit,type
+temperature,Temperature,36.5,°C,vitals
+pulse,Pulse,60,beats/minute,vitals
+blood_pressure,Blood Pressure,110/70,mm Hg,vitals
+respiratory_rate,Respiratory Rate,12,/ minute,vitals
+sodium,Sodium,140,mmol/L,serology

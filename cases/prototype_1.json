@@ -1,0 +1,5 @@
+{
+  "case_prompt": "A 65-year-old man comes to the clinic complaining of left leg pain for three months.",
+  "further_information": ["The pain is characterized by a continuous creamping in the left calf that starts after walking two blocks and goes away with rest.", "The patient has a history of hypertension and type II diabetes mellitus.", "Family history includes a pulmonary embolism experienced by his mother at age 55.", "The patient quit smoking 5 years ago.", "The patient's temperature is 37.0°C (98.6°F), pulse is 80/min and regular, respirations are 20/min, and left arm blood pressure is 140/85 mmHg. Left ankle blood pressure is 210/150.", "Physical exam shows symmetric legs without swelling, redness, or skin breakdown."],
+  "case_answer": ["Toe-brachial index", "Referral to vascular specialist"]
+}
