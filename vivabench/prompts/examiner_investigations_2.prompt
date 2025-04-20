@@ -1,0 +1,11 @@
+You are a medical coder parsing medical information.
+
+A doctor is describing what he plans to do with a patient in [[DOCTOR REQUEST]]. You are to compare the doctor's request with the list of available investigations in [[AVAILABLE INVESTIGATIONS]], and extract the keys for the investigations described in [[DOCTOR REQUEST]] for the doctor. If an investigation is not included in the doctor's request, do not include in your response. If the doctor orders an investigation not present in [[AVAILABLE INVESTIGATIONS]], list them in 'unavilable_investigations'. If the doctor request does not mention any investigations, respond with an empty list [] in the "available investigations" section.
+
+[[DOCTOR REQUEST]]:
+{agent_response}
+
+[[AVAILABLE INVESTIGATIONS]]:
+{investigations}
+
+Provide your response in json format {{"available_investigations": [List of available investigations], "unavilable_investigations: [List of unavailable investigations]}}

@@ -1,0 +1,32 @@
+{
+  "temperature": {
+    "full_name": "Temperature",
+    "default_value": "36.5",
+    "unit": "\u00b0C",
+    "type": "vitals"
+  },
+  "pulse": {
+    "full_name": "Pulse",
+    "default_value": "60",
+    "unit": "beats/minute",
+    "type": "vitals"
+  },
+  "blood_pressure": {
+    "full_name": "Blood Pressure",
+    "default_value": "110/70",
+    "unit": "mm Hg",
+    "type": "vitals"
+  },
+  "respiratory_rate": {
+    "full_name": "Respiratory Rate",
+    "default_value": "12",
+    "unit": "/ minute",
+    "type": "vitals"
+  },
+  "sodium": {
+    "full_name": "Sodium",
+    "default_value": "140",
+    "unit": "mmol/L",
+    "type": "serology"
+  }
+}
