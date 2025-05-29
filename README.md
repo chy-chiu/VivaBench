@@ -103,5 +103,5 @@ If you use VivaBench in your work, please cite:
   year    = {2025},
 }
 ```
-📝 License & Contributing
-This project is released under the MIT License. Contributions welcome—please open an issue or pull request.
+## 📝 License & Contributing
+This project is released under the CC-NA License. Contributions welcome—please open an issue or pull request.

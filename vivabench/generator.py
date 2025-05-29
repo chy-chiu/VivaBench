@@ -87,7 +87,9 @@ class CaseGenerator:
         Args:
             model: The language model to use for text generation
             output_file: Optional file path to save results
-            snomed_core_path: Path to SNOMED-CT core subset file
+            snomed_embedding_path: Path to preloaded SNOMED embeddings
+            icd_embedding_path: Path to preloaded ICD-10 embeddings
+            icd_embedding_path: Path to preloaded ICD-10 mapping
         """
         self.model = model
         if reasoning_model:

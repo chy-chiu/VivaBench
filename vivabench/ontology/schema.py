@@ -6,6 +6,7 @@ from loguru import logger
 from pydantic import BaseModel, Field, model_validator
 
 from vivabench.ontology.templates import FULL_CASE_TEMPLATE, _symptom_description
+from vivabench.ontology.defaults import get_default_lab
 from vivabench.utils import normalize_key, prettify
 
 
@@ -1318,9 +1319,16 @@ class Investigations(ClinicalData):
 
     # TODO: Get normal reference values here later
     def get_default(self, query):
-        specimen_type, ix_key = query.split(":")
-
-        return f"- {prettify(ix_key)}: Normal"
+        
+        
+        if default_lab := get_default_lab(query):
+            default_result = InvestigationResult.model_validate(default_lab)
+            
+            return default_result.prompt
+                
+        else:
+            _, ix_key = query.split(":", 1)
+            return f"- {prettify(ix_key)}: Normal"
 
     def get_grouped_investigations(self, queries: List[str]):
 

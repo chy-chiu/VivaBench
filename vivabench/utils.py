@@ -2,8 +2,7 @@ import re
 
 import rapidjson
 from langchain_openai import ChatOpenAI
-
-# from langchain.chat_models import Ollama
+from langchain_ollama import ChatOllama
 
 
 def remove_json_markdown(json_str: str):
@@ -215,6 +214,34 @@ def init_ollama_chat_model(
     """
 
     base_url = f"http://{host}:{port}"
-    return Ollama(
+    return ChatOllama(
         model=model_name, base_url=base_url, temperature=temperature, **kwargs
     )
+
+def transform_agent_trace(input_text):
+    # Extract the action, query, and reasoning
+    lines = input_text.strip().split('\n')
+    action_line = lines[0].strip()
+    query_line = lines[1].strip()
+    reasoning_lines = lines[2:]
+    
+    # Extract the action type
+    action_type = action_line.replace('Action: ', '').strip()
+    
+    # Extract the query
+    if "diagnosis" in action_line.lower():
+        query = query_line.replace('Query: ', '').strip()
+        # print(query)
+        ddx = eval(query)
+        query = ", ".join([f"(condition: {d.get('condition', d.get('diagnosis'))}, confidence: {d['confidence']})" for d in ddx])
+        
+    else:
+        query = query_line.replace('Query: ', '').strip()
+    
+    # Extract the reasoning
+    reasoning = ' '.join([line.replace('Reasoning: ', '') for line in reasoning_lines]).strip()
+    
+    # Format the output
+    output = f"Agent: {reasoning}\n[{action_type.lower()}] {query}"
+    
+    return output
