@@ -1,0 +1,346 @@
+{
+    "history_freetext": "While watching television two hours prior to presentation, the patient experienced a sudden, severe spinning sensation described as vertigo, which was constant and rated 8/10 in severity. The dizziness was associated with nausea and vomiting and worsened by standing or moving his head. Simultaneously, he developed persistent blurred and double vision, rated 7/10 in severity, which was worse when looking to the left and accompanied by difficulty focusing. He also noticed sudden onset numbness and tingling on the left side of his face and right arm, along with mild weakness in the right arm. These symptoms persisted without clear exacerbating or relieving factors.",
+    "physical": {
+        "vitals": {
+            "blood_pressure_systolic": 168,
+            "blood_pressure_diastolic": 94,
+            "heart_rate": 84
+        },
+        "systems": {
+            "neurological": {
+                "mental_status": {
+                    "name": "mental status",
+                    "description": "alert and oriented"
+                },
+                "distress": {
+                    "name": "distress",
+                    "description": "distressed by vertigo and nausea"
+                },
+                "cranial_nerve_examination": {
+                    "name": "cranial nerve examination",
+                    "description": "left-sided ptosis, miosis, decreased corneal reflex, nystagmus on left lateral gaze",
+                    "location": "left"
+                },
+                "nystagmus": {
+                    "name": "nystagmus",
+                    "description": "nystagmus on left lateral gaze",
+                    "location": "left"
+                },
+                "sensation": {
+                    "name": "sensation",
+                    "description": "decreased pinprick sensation over left face and right arm",
+                    "location": "left face, right arm"
+                },
+                "motor_strength": {
+                    "name": "motor strength",
+                    "description": "mild right arm weakness (4/5)",
+                    "location": "right arm"
+                },
+                "gait": {
+                    "name": "gait",
+                    "description": "ataxic, unable to perform tandem walking"
+                },
+                "cerebellar_testing": {
+                    "name": "cerebellar testing",
+                    "description": "dysmetria on right",
+                    "location": "right"
+                }
+            },
+            "cardiovascular": {
+                "examination": {
+                    "name": "examination",
+                    "description": "unremarkable"
+                }
+            },
+            "respiratory": {
+                "examination": {
+                    "name": "examination",
+                    "description": "unremarkable"
+                }
+            }
+        }
+    },
+    "investigations": {
+        "bedside": {
+            "ecg": {
+                "name": "Electrocardiogram",
+                "value": "normal sinus rhythm"
+            }
+        },
+        "blood": {
+            "glucose_fasting": {
+                "name": "Glucose [Moles/volume] in Serum or Plasma --Fasting",
+                "value": 8.9,
+                "units": "mmol/L",
+                "flag": "H"
+            },
+            "ldl_cholesterol": {
+                "name": "Low Density Lipoprotein Cholesterol",
+                "value": 3.7,
+                "units": "mmol/L"
+            },
+            "hemoglobin_a1c": {
+                "name": "Hemoglobin A1c/Hemoglobin.total in Blood",
+                "value": 7.8,
+                "units": "%"
+            },
+            "complete_blood_count": {
+                "name": "Complete Blood Count",
+                "value": "within normal limits"
+            },
+            "renal_function_tests": {
+                "name": "Renal Function Tests",
+                "value": "within normal limits"
+            },
+            "liver_function_tests": {
+                "name": "Liver Function Tests",
+                "value": "within normal limits"
+            }
+        }
+    },
+    "imaging": {
+        "CT Brain": {
+            "modality": "CT",
+            "region": "Brain",
+            "report": "Unremarkable for acute hemorrhage"
+        },
+        "MRI Brain": {
+            "modality": "MRI",
+            "region": "Brain",
+            "report": "Acute infarct in the left lateral medulla"
+        }
+    },
+    "demographics": {
+        "age": 67,
+        "unit": "year",
+        "gender": "male"
+    },
+    "history": {
+        "chief_complaint": "sudden severe dizziness, unsteadiness, and double vision",
+        "symptoms": {
+            "dizziness": {
+                "name": "Dizziness",
+                "present": true,
+                "system": "neurological",
+                "onset": "sudden, two hours prior to arrival",
+                "duration": "persistent since onset",
+                "progression": "constant",
+                "character": "severe spinning sensation (vertigo)",
+                "severity": "8/10",
+                "aggravating_factors": [
+                    "standing",
+                    "moving his head"
+                ],
+                "associated_symptoms": [
+                    "Nausea",
+                    "Vomiting",
+                    "Unsteady gait",
+                    "Diplopia"
+                ],
+                "context": "occurred while watching television",
+                "history": "sudden, severe spinning sensation described as vertigo, constant and rated 8/10 in severity, associated with nausea and vomiting, worsened by standing or moving his head",
+                "primary": true
+            },
+            "unsteady_gait": {
+                "name": "Unsteady gait",
+                "present": true,
+                "system": "neurological",
+                "onset": "sudden, two hours prior to arrival",
+                "duration": "persistent since onset",
+                "associated_symptoms": [
+                    "Dizziness",
+                    "Diplopia"
+                ],
+                "context": "occurred while watching television",
+                "primary": true
+            },
+            "diplopia": {
+                "name": "Diplopia",
+                "present": true,
+                "system": "ophthalmological",
+                "onset": "sudden, two hours prior to arrival",
+                "duration": "persistent since onset",
+                "progression": "persistent",
+                "character": "blurred and double vision, difficulty focusing",
+                "severity": "7/10",
+                "aggravating_factors": [
+                    "looking to the left"
+                ],
+                "associated_symptoms": [
+                    "Dizziness",
+                    "Unsteady gait"
+                ],
+                "context": "occurred while watching television",
+                "history": "persistent blurred and double vision, worse when looking to the left, accompanied by difficulty focusing",
+                "primary": true
+            },
+            "nausea": {
+                "name": "Nausea",
+                "present": true,
+                "system": "gastrointestinal",
+                "onset": "sudden, with dizziness",
+                "associated_symptoms": [
+                    "Dizziness",
+                    "Vomiting"
+                ],
+                "context": "associated with dizziness",
+                "primary": false
+            },
+            "vomiting": {
+                "name": "Vomiting",
+                "present": true,
+                "system": "gastrointestinal",
+                "onset": "sudden, with dizziness",
+                "associated_symptoms": [
+                    "Dizziness",
+                    "Nausea"
+                ],
+                "context": "associated with dizziness",
+                "primary": false
+            },
+            "paresthesia": {
+                "name": "Paresthesia",
+                "present": true,
+                "system": "neurological",
+                "onset": "sudden, two hours prior to arrival",
+                "duration": "persistent since onset",
+                "location": "left side of face",
+                "associated_symptoms": [
+                    "Paresthesia of upper limb",
+                    "Weakness of right upper limb"
+                ],
+                "context": "occurred simultaneously with other symptoms",
+                "primary": false
+            },
+            "paresthesia_of_upper_limb": {
+                "name": "Paresthesia of upper limb",
+                "present": true,
+                "system": "neurological",
+                "onset": "sudden, two hours prior to arrival",
+                "duration": "persistent since onset",
+                "location": "right arm",
+                "associated_symptoms": [
+                    "Paresthesia",
+                    "Weakness of right upper limb"
+                ],
+                "context": "occurred simultaneously with other symptoms",
+                "primary": false
+            },
+            "weakness_of_right_upper_limb": {
+                "name": "Weakness of right upper limb",
+                "present": true,
+                "system": "neurological",
+                "onset": "sudden, two hours prior to arrival",
+                "duration": "persistent since onset",
+                "location": "right arm",
+                "severity": "mild",
+                "associated_symptoms": [
+                    "Paresthesia of upper limb",
+                    "Paresthesia"
+                ],
+                "context": "occurred simultaneously with other symptoms",
+                "primary": false
+            }
+        },
+        "past_medical_history": {
+            "hypertension": {
+                "condition": "hypertension",
+                "present": true,
+                "ongoing": true,
+                "description": null
+            },
+            "type_2_diabetes_mellitus": {
+                "condition": "type 2 diabetes mellitus",
+                "present": true,
+                "ongoing": true,
+                "description": null
+            },
+            "hyperlipidemia": {
+                "condition": "hyperlipidemia",
+                "present": true,
+                "ongoing": true,
+                "description": null
+            },
+            "stroke": {
+                "condition": "stroke",
+                "present": false,
+                "ongoing": false,
+                "description": "No prior history of stroke"
+            },
+            "transient_ischemic_attack": {
+                "condition": "transient ischemic attack",
+                "present": false,
+                "ongoing": false,
+                "description": "No prior history of transient ischemic attack"
+            }
+        },
+        "medications": [],
+        "allergies": [],
+        "social_history": {
+            "smoking_current": false,
+            "smoking_quit": "5 years ago",
+            "smoking_pack_years": 30.0,
+            "alcohol_use": "Occasional alcohol consumption",
+            "substance_use": null,
+            "occupation": null,
+            "living_situation": "Lives with spouse",
+            "travel_history": null,
+            "exercise": null,
+            "diet": null,
+            "sexual": null,
+            "other": {
+                "independent_in_activities_of_daily_living": "Yes"
+            }
+        },
+        "family_history": {
+            "cerebrovascular_disease": {
+                "condition": "cerebrovascular disease",
+                "relationship": "family",
+                "age_at_onset": null,
+                "notes": "No family history"
+            },
+            "early_cardiac_events": {
+                "condition": "early cardiac events",
+                "relationship": "family",
+                "age_at_onset": null,
+                "notes": "No family history"
+            }
+        }
+    },
+    "diagnosis": [
+        {
+            "name": "Acute left lateral medullary (Wallenberg) syndrome",
+            "icd_10": "I63",
+            "relevant_keys": [
+                "history:symptoms:dizziness",
+                "history:symptoms:unsteady_gait",
+                "history:symptoms:diplopia",
+                "history:symptoms:nausea",
+                "history:symptoms:vomiting",
+                "history:symptoms:paresthesia",
+                "history:symptoms:paresthesia_of_upper_limb",
+                "history:symptoms:weakness_of_right_upper_limb",
+                "physical:neurological:cranial_nerve_examination",
+                "physical:neurological:nystagmus",
+                "physical:neurological:sensation",
+                "physical:neurological:motor_strength",
+                "physical:neurological:gait",
+                "physical:neurological:cerebellar_testing",
+                "imaging:MRI Brain"
+            ]
+        }
+    ],
+    "differentials": [
+        {
+            "name": "Acute cerebellar infarction (PICA territory)",
+            "icd_10": "H81",
+            "relevant_keys": [
+                "history:symptoms:dizziness",
+                "history:symptoms:unsteady_gait",
+                "physical:neurological:gait",
+                "physical:neurological:cerebellar_testing"
+            ],
+            "reasoning": "Could be vertigo due to PICA infarcts involving the cerebellum. However, the presence of classic lateral medullary signs (crossed sensory loss, Horner's syndrome, cranial nerve findings) and MRI evidence of medullary infarct make Wallenberg syndrome the primary diagnosis, but acute cerebellar infarction in the PICA territory is a reasonable alternative given the vascular territory involved."
+        }
+    ]
+}
