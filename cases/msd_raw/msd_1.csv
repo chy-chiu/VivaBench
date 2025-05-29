@@ -1,0 +1,22 @@
+var_name,full_name,value,unit,type
+temperature,Temperature,38.8,°C,vitals
+pulse,Pulse,120,beats/minute,vitals
+blood_pressure,Blood Pressure,110/76,mm Hg,vitals
+respiratory_rate,Respiratory Rate,20,/ minute,vitals
+hemoglobin,Hemoglobin,140,mmol/L,serology
+wbc,WBC count,17,x 10^9 / L,serology
+platelet,Platelet count,150,x 10^9 / L,serology
+sodium,Sodium,137,mmol/L,serology
+potassium,Potassium,3.9,mmol/L,serology
+creatinine,Creatinine,62,micromol/L,serology
+glucose,Glucose,4.3,mmol/L,serology
+bun,BUN,8.2,mmol/L,serology
+urine_wbc_esterase,Leukocyte esterase,Positive,,urine
+urine_wbc,WBC  count,30-50 per high power field,,urine
+urine_blood,Blood,Positive,,urine
+urine_ketones,Ketones,Positive,,urine
+urine_bacteria,Bacteria,Numerous,,urine
+urine_nitrites,Nitrites,Positive,,urine
+urine_protein,Protein,Negative,,urine
+urine_std_panel,STD Panel,Urine gonorrhea/chlamydia/trichomoniasis negative,,urine
+ultrasound_renal,Renal/bladder ultrasound,Renal/bladder ultrasound: No hydronephrosis noted. Incidentally noted intrauterine fetus with heartbeat of 156 beats/minute.,,imaging

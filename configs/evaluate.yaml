@@ -1,0 +1,57 @@
+# -----------------------------------------------------------------------------
+# 1. INPUT / OUTPUT
+# -----------------------------------------------------------------------------
+data:
+  input: "./output_clincase_test.csv"        # Input .csv with clinical cases
+  evaluation_id: ""                          # ID for this evaluation run. If not provided, defaults to {model}-{timestamp}
+  output_dir: "./evaluation_output_test"     # Directory for all evaluation outputs
+  batch_size: 100                            # null → single big batch  
+  max_workers: 30                            # number of parallel runners
+
+# -----------------------------------------------------------------------------
+# 2. MODELS
+# -----------------------------------------------------------------------------
+models:
+
+  agent:
+    provider: "openrouter"                   # use "openrouter" for hosted models, or "ollama" for your local server
+    model:    "meta-llama/llama-4-maverick"  # model name. NB openrouter requires the company name as well, e.g. "meta-llama/llama-4-maverick"
+    host:     "localhost"                    # Ollama server host
+    port:     11434                          # Ollama server port
+    temperature: 0.0                         # model temperature
+    # you can specify either `api_key` OR `api_key_env` here
+    api_key_env: "OPENROUTER_API_KEY"
+    api_key: "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"
+
+  # Examiner model for if you use LLM for mapper / parser
+  examiner:
+    provider: "openai"          # We use gpt-4.1 as the backbone for examination. However can use one of: openai | openrouter | ollama
+    model:    "gpt-4.1"
+    temperature: 0.0            # Model temperature. We recommend 0 for examiner model for quasi-determinstic output
+    api_key_env: "OPENAI_API"
+    api_key: ""
+    
+# -----------------------------------------------------------------------------
+# 3. EXAMINATION PARAMETERS
+# -----------------------------------------------------------------------------
+examination:
+  mapper:    "llm"             # "deterministic" or "llm"
+  parser:    "llm"             # "deterministic" or "llm"
+  hx_limit:   10
+  phys_limit: 5
+  ix_limit:   5
+  img_limit:  5
+  action_limit: 20
+  snomed_embeddings_path: "./medical/snomed_embeddings"
+
+# -----------------------------------------------------------------------------
+# 4. METRICS PARAMETERS
+# -----------------------------------------------------------------------------
+metrics:
+  semantic_similarity_threshold: 0.8
+  icd_embedding_path:            "./medical/icd_embeddings"
+  icd_mapping_path:              "./medical/d_icd_diagnoses.csv"
+  sentence_transformer_model:    "all-mpnet-base-v2"
+  
+logging:
+  level: "INFO"

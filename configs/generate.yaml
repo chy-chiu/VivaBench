@@ -1,0 +1,38 @@
+# -----------------------------------------------------------------------------
+# Config to generate synthetic cases for VivaBench from free-text clinical vignettes
+# -----------------------------------------------------------------------------
+
+# 1) I/O & BATCHING
+pipeline:
+  input:         "input_mini.csv"      # path to generated cases
+  output:        "output_clincase_test.csv"      # where to write outputs
+  batch_size:      10                       # rows per batch
+  limit:          100                       # optional cap on #rows
+
+# 2) EMBEDDINGS & MAPPINGS
+embeddings:
+  snomed:        "./medical/snomed_embeddings"
+  icd_embedding: "./medical/icd_embeddings"
+
+mappings:
+  icd_map:       "./medical/d_icd_diagnoses.csv"
+
+# 3) MODELS
+models:
+  generator:
+    provider:     "openai"                  
+    model:        "gpt-4.1-mini"
+    temperature:  0.0
+    api_key_env:  "OPENAI_API"
+    api_key: ""
+
+  reasoning:
+    provider:     "openai"
+    model:        "gpt-4.1-mini"
+    temperature:  0.0
+    api_key_env:  "OPENAI_API"
+    api_key: ""
+
+# 4) LOGGING
+logging:
+  level: "INFO"
